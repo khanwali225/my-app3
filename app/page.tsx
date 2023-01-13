@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
+import Link from 'next/link'
 import styles from './page.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -9,9 +10,19 @@ export default function Home() {
     <main className={styles.main}>
       <div className={styles.description}>
         <p>
-          Get started by editing&nbsp;
+          Lets Get started by editing&nbsp;
           <code className={styles.code}>app/page.tsx</code>
         </p>
+        <p 
+           className = "hello"
+           style={{color:"green", 
+                  background:"red", 
+                  fontSize: "15px", 
+                  borderRadius: "50%",
+                  }}
+                  >
+           My Name is Khan Wali.
+      </p>
         <div>
           <a
             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
@@ -30,6 +41,15 @@ export default function Home() {
           </a>
         </div>
       </div>
+      <div>Hello World</div>
+      <Link href="/name">
+        Go to name page using link (notic, no x page is reloaded)
+      </Link>
+      <a href="/name">
+        Go to name page using &lt;a&gt; tag (notice, the page is reloading,
+         show x) {" "}
+      </a>
+    
 
       <div className={styles.center}>
         <Image
